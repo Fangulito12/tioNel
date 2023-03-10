@@ -1,0 +1,20 @@
+termux-setup-storage
+pkg update 
+pkg upgrade
+pkg install curl
+pkg install git
+pkg install wget
+pkg install python3
+pip install requests
+pkg install figlets
+pkg install nano
+pkg install php
+pkg install nmap
+pkg install golang
+go install github.com/aztecrabbit/bugscanner-go@latest
+cd
+cd go
+cd bin
+/$PREFIX/bin
+echo 'PATH="$PATH:$HOME/go/bin"' >> $HOME/.bashrc && source $HOME/.bashrc
+bugscanner-go scan cdn-ssl --target=TUDOMINIO.cloudfront.net --payload=HEAD wss://TUDOMINIO.cloudfront.net HTTP/1.1[crlf]Host: TUDOMINIO.cloudfront.net[crlf]Upgrade: websocket[crlf][crlf] -c 13.227.0.0/17  --port 443
